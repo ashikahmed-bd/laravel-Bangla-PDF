@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/pdf', [PdfController::class, 'pdfGenerate'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/certificate', [CertificateController::class, 'show'])->name('certificate.show');
+Route::get('/certificate/apply', [CertificateController::class, 'apply'])->name('certificate.apply');
+Route::get('/certificate/{id}', [CertificateController::class, 'show'])->name('certificate.show');
+Route::get('/download', [CertificateController::class, 'download'])->name('certificate.download');

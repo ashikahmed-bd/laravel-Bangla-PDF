@@ -17,7 +17,9 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'আবু ত্বহা আদনান',
+                'name' => 'মোঃ ফরিদ আহম্মেদ',
+                'title' => 'Councilor',
+                'signature' => '1.jpg',
                 'email' => fake()->unique()->safeEmail(),
                 'email_verified_at' => now(),
                 'password' => Hash::make('password'),
@@ -26,7 +28,9 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'name' => 'আশিক আহমেদ',
+                'name' => '(উমা চৌধুরী)',
+                'title' => 'Mayor',
+                'signature' => '2.jpg',
                 'email' => fake()->unique()->safeEmail(),
                 'email_verified_at' => now(),
                 'password' => Hash::make('password'),
